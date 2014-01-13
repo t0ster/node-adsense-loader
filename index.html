@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script async type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+<h1>Hello App</h1>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+    // alert(code.join('\n'));
+    // document.write(code.join('\n'));
+
+    console.log('DOM Loaded');
+    $.get('http://0.0.0.0:8888/adfeed', function(res){
+        document.write(res.script.join('\n'));
+    }, 'json');
+});
+</script>
+</body>
+</html>
